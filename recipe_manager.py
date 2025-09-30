@@ -273,29 +273,10 @@ if __name__ == "__main__":
                                 case "3":
                                     GenFuncs.firstLoop = True
                                     GenFuncs.clear_text()
-                                    allAuthors = []
-                                    allAuthorsString = ""
                                     authorSearch = ""
                                     while not authorSearch:
-                                        if GenFuncs.firstLoop:
-                                            GenFuncs.firstLoop = False
-                                            ## Get a set of all authors
-                                            for recipe in myCookbook.recipes:
-                                                allAuthors.append(myCookbook.recipes[recipe]["inventor"])
-
-                                            ## Can do set instead of dictionary trick as order irrelevant
-                                            allAuthors = list(set(allAuthors))
-                                            ## Hijack listRecipes to print authors
-                                            allAuthorsString = listRecipes.listRecipes(10, customList=allAuthors)
-
-                                        sys.stdout.write(textwrap.dedent(f"""
-                                        \033[1m\033[3mThis is a list of every published author in this cookbook.\033[0m
-                                        {allAuthorsString}
-                                        
-                                        \033[1m\033[3mPlease enter the name of the author whose recipes you wish to see: (Type \"\\EXIT\" to quit)\033[0m
-                                        > """))
-                                        sys.stdout.flush()
-
+                                        ## Get a set of all authors, then lets them search for them
+                                        allAuthors = searchRecipes.getAuthorNames()
                                         authorSearch = input().strip()
                                         ## Validate they entered a valid author
                                         authorSearch = searchRecipes.sanitizeAuthor(authorSearch, allAuthors)

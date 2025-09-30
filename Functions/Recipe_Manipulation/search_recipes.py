@@ -187,6 +187,27 @@ def searchIngredients(dishIngredients):
                 searchMethod = ""
                 GenFuncs.failedInput(3)
 
+## Lists all authors
+def getAuthorNames():
+    allAuthors = []
+    for recipe in RM.myCookbook.recipes:
+        allAuthors.append(RM.myCookbook.recipes[recipe]["inventor"])
+
+    ## Can do set instead of dictionary trick as order irrelevant
+    allAuthors = list(set(allAuthors))
+    ## Hijack listRecipes to print authors
+    allAuthorsString = listRecipes.listRecipes(1, customList=allAuthors)
+
+    sys.stdout.write(textwrap.dedent(f"""
+    \033[1m\033[3mThis is a list of every published author in this cookbook.\033[0m
+    {allAuthorsString}
+
+    \033[1m\033[3mPlease enter the name of the author whose recipes you wish to see: (Type \"\\EXIT\" to quit)\033[0m
+    > """))
+    sys.stdout.flush()
+
+    return allAuthors
+
 ## Makes sure the author's name they enter is valid
 def sanitizeAuthor(author, allAuthors):
     author = author.title()
