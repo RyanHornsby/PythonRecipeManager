@@ -1,0 +1,77 @@
+{
+  "Pi-pie": {
+    "ingredients": [
+      "Flour",
+      "Milk",
+      "Pastry",
+      "Chicken",
+      "Mushrooms",
+      "Euler's sauce"
+    ],
+    "instructions": "Recipes/Pi-pie.txt",
+    "inventor": "Ryan Hornsby"
+  },
+  "Egg sandwich": {
+    "ingredients": [
+      "Egg",
+      "2 slices of bread"
+    ],
+    "instructions": "Recipes/Egg sandwich.txt",
+    "inventor": "Gordon Eggsey"
+  },
+  "Cheese sandwich": {
+    "ingredients": [
+      "Cheese",
+      "Bread"
+    ],
+    "instructions": "Recipes/Cheese sandwich.txt",
+    "inventor": "Wallace"
+  },
+  "Burger": {
+    "ingredients": [
+      "Pepper",
+      "Lettuce",
+      "Pineapples",
+      "Meat",
+      "Buns",
+      "Mushrooms"
+    ],
+    "instructions": "Recipes/Burger.txt",
+    "inventor": "Ryan Hornsby"
+  },
+  "Milk": {
+    "ingredients": [
+      "Milk"
+    ],
+    "instructions": "Recipes/Milk.txt",
+    "inventor": "Milk-boy"
+  },
+  "Chicken wrap": {
+    "ingredients": [
+      "Chicken",
+      "Mushrooms",
+      "Peppers",
+      "Pepper",
+      "Mayo",
+      "Lettuce"
+    ],
+    "instructions": "Recipes/Chicken wrap.txt",
+    "inventor": "Ryan Hornsby"
+  },
+  "Sausage roll": {
+    "ingredients": [
+      "Sausage",
+      "A roll"
+    ],
+    "instructions": "Recipes/Sausage roll.txt",
+    "inventor": "Still Sue"
+  },
+  "Test": {
+    "ingredients": [
+      "A bit of this",
+      "A bit of that"
+    ],
+    "instructions": "Recipes/Test.txt",
+    "inventor": "Still Sue"
+  }
+}
